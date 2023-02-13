@@ -44,7 +44,14 @@ public class ListAdsDao implements Ads {
 
     @Override
     public List<Ad> findAdByKeyword(String search) {
-        return null;
+            List<Ad> matchingAds = new ArrayList<>();
+            for (Ad ad : all()) {
+                if (ad.getTitle().toLowerCase().contains(search.toLowerCase()) ||
+                        ad.getDescription().toLowerCase().contains(search.toLowerCase())) {
+                    matchingAds.add(ad);
+                }
+            }
+            return matchingAds;
     }
 
     private List<Ad> generateAds() {
