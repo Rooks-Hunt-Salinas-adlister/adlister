@@ -22,3 +22,25 @@ CREATE TABLE ads (
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
 );
+
+CREATE TABLE categories (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR(200) NOT NULL,
+    PRIMARY KEY (id)
+
+
+);
+
+CREATE TABLE ad_list (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    user_id INT UNSIGNED NOT NULL,
+    ad_id INT UNSIGNED NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(user_id) REFERENCES users(id)
+        ON DELETE CASCADE,
+        FOREIGN KEY(ad_id) REFERENCES ads(id)
+        ON DELETE CASCADE
+
+
+
+);
