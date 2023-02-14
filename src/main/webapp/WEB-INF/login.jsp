@@ -20,6 +20,10 @@
             <br>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
+        <hr>
+        <jsp:include page="partials/head.jsp">
+            <jsp:param name="title" value="Register For Our Site!" />
+        </jsp:include>
     </div>
 </body>
 </html>
