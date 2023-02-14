@@ -13,8 +13,8 @@
                         Profile
                     </a>
                     <ul class="dropdown-menu text-white">
-                        <li><a class="dropdown-item text-white" href="#">Profile Page</a></li>
-                        <li><a class="dropdown-item text-white" href="/logout">Logout</a></li>
+                        <li><a class="dropdown-item" href="#">Profile Page</a></li>
+                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -45,6 +45,37 @@
                     <textarea class="form-control" id="AdDescription" placeholder="Ad Description" rows="3"></textarea>
                 </div>
                 <input class="form-control" id="AdImage" type="text" placeholder="Image URL" aria-label="default input example">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="automotive" id="automotive">
+                    <label class="form-check-label" for="automotive">
+                        Automotive
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="recreational" id="recreational">
+                    <label class="form-check-label" for="recreational">
+                        Recreational
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="technology" id="technology">
+                    <label class="form-check-label" for="technology">
+                        Technology
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="service" id="service">
+                    <label class="form-check-label" for="service">
+                        Service
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="academic" id="academic">
+                    <label class="form-check-label" for="academic">
+                        Academic
+                    </label>
+                </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
