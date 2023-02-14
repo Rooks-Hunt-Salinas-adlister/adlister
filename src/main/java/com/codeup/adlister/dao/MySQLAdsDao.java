@@ -3,14 +3,11 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MySQLAdsDao implements Ads {
+public abstract class MySQLAdsDao implements Ads {
     private Connection connection = null;
 
     public MySQLAdsDao(Config config) {
@@ -66,7 +63,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Ad updateAd(Ad ad) {
+    public void updateAd(Ad ad) {
         String query = "UPDATE ads SET title = ?, description = ? WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
@@ -77,7 +74,6 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error updating Ad", e);
         }
-        return ad;
     }
 
     @Override
@@ -101,7 +97,8 @@ public class MySQLAdsDao implements Ads {
                 rs.getLong("id"),
                 rs.getLong("user_id"),
                 rs.getString("title"),
-                rs.getString("description")
+                rs.getString("description"),
+                rs.getString("imageURL")
         );
     }
 

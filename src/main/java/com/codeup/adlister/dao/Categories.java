@@ -1,30 +1,15 @@
 package com.codeup.adlister.dao;
 
-public class Categories {
+import com.codeup.adlister.models.Category;
 
-    private long id;
+import java.util.List;
 
-    private String name;
+public interface Categories {
+    //get a list of all categories
+    List<Category> all();
 
+    //get categories linked with ads by ad's id
+    List<Category> getCategoriesLinkedWithAd(Long adId);
 
-    public Categories(long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    Category getCategoryById(long id);
 }
