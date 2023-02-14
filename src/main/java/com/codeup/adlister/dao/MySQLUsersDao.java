@@ -6,7 +6,7 @@ import com.mysql.cj.jdbc.Driver;
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
-    private Connection connection;
+    private final Connection connection;
 
     public MySQLUsersDao(Config config) {
         try {
@@ -35,6 +35,11 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
+    public User findById(long id) {
+        return null;
+    }
+
+    @Override
     public Long insert(User user) {
         String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
         try {
@@ -49,6 +54,11 @@ public class MySQLUsersDao implements Users {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
         }
+    }
+
+    @Override
+    public void update(User user) {
+
     }
 
     private User extractUser(ResultSet rs) throws SQLException {
