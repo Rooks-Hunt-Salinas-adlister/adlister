@@ -14,11 +14,8 @@
         </c:when>
         <c:otherwise>
             <jsp:include page="/WEB-INF/login.jsp"/>
+            <jsp:include page="/WEB-INF/register.jsp"/>
         </c:otherwise>
     </c:choose>
-
-        <div class="container">
-            <h1>Welcome to the Adlister!</h1>
-        </div>
     </body>
 </html>

@@ -14,6 +14,7 @@
         </c:when>
         <c:otherwise>
             <jsp:include page="/WEB-INF/login.jsp"/>
+            <jsp:include page="/WEB-INF/register.jsp"/>
         </c:otherwise>
     </c:choose>
     </body>
