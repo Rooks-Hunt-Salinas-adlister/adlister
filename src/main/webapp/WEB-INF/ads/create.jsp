@@ -18,6 +18,11 @@
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
             <input type="submit" class="btn btn-block btn-primary">
+            <a href="/profile">
+                <button   type="button" class="btn btn-primary text-white">
+                    Return to Profile
+                </button>
+            </a>
         </form>
     </div>
 </body>
