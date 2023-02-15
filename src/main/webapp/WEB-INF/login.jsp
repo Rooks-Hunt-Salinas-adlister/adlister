@@ -19,6 +19,11 @@
             </div>
             <br>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <a href="/register">
+                <button   type="button" class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Register
+                </button>
+            </a>
         </form>
         <hr>
         <jsp:include page="partials/head.jsp">
