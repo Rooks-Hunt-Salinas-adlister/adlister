@@ -19,9 +19,11 @@
                 </li>
             </ul>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Post Ad
-            </button>
+            <a href="/create">
+                <button   type="button" class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Post Ad
+                </button>
+            </a>
 <%-- Search Button --%>
             <form class="d-flex" role="search" style="margin-top: 1em; margin-left: 2em">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -31,59 +33,62 @@
     </div>
 </nav>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Post an Ad</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input class="form-control" id="AdTitle" type="text" placeholder="Ad Title" aria-label="default input example">
-                <div class="mb-3">
-                    <textarea class="form-control" id="AdDescription" placeholder="Ad Description" rows="3"></textarea>
-                </div>
-                <input class="form-control" id="AdImage" type="text" placeholder="Image URL" aria-label="default input example">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="automotive" id="automotive">
-                    <label class="form-check-label" for="automotive">
-                        Automotive
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="recreational" id="recreational">
-                    <label class="form-check-label" for="recreational">
-                        Recreational
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="technology" id="technology">
-                    <label class="form-check-label" for="technology">
-                        Technology
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="service" id="service">
-                    <label class="form-check-label" for="service">
-                        Service
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="academic" id="academic">
-                    <label class="form-check-label" for="academic">
-                        Academic
-                    </label>
-                </div>
+<%--<!-- Modal -->--%>
+<%--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
+<%--    <div class="modal-dialog">--%>
+<%--        <form action="/ads/create" method="post">--%>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
+<%--        <div class="modal-content">--%>
+<%--            <div class="modal-header">--%>
+<%--                <h1 class="modal-title fs-5" id="exampleModalLabel">Post an Ad</h1>--%>
+<%--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--%>
+<%--            </div>--%>
+<%--            <div class="modal-body">--%>
+<%--                <input class="form-control" id="AdTitle" type="text" placeholder="Ad Title" aria-label="default input example">--%>
+<%--                <div class="mb-3">--%>
+<%--                    <textarea class="form-control" id="AdDescription" placeholder="Ad Description" rows="3"></textarea>--%>
+<%--                </div>--%>
+<%--                <input class="form-control" id="AdImage" type="text" placeholder="Image URL" aria-label="default input example">--%>
+<%--                <div class="form-check">--%>
+<%--                    <input class="form-check-input" type="checkbox" value="automotive" id="automotive">--%>
+<%--                    <label class="form-check-label" for="automotive">--%>
+<%--                        Automotive--%>
+<%--                    </label>--%>
+<%--                </div>--%>
+<%--                <div class="form-check">--%>
+<%--                    <input class="form-check-input" type="checkbox" value="recreational" id="recreational">--%>
+<%--                    <label class="form-check-label" for="recreational">--%>
+<%--                        Recreational--%>
+<%--                    </label>--%>
+<%--                </div>--%>
+<%--                <div class="form-check">--%>
+<%--                    <input class="form-check-input" type="checkbox" value="technology" id="technology">--%>
+<%--                    <label class="form-check-label" for="technology">--%>
+<%--                        Technology--%>
+<%--                    </label>--%>
+<%--                </div>--%>
+<%--                <div class="form-check">--%>
+<%--                    <input class="form-check-input" type="checkbox" value="service" id="service">--%>
+<%--                    <label class="form-check-label" for="service">--%>
+<%--                        Service--%>
+<%--                    </label>--%>
+<%--                </div>--%>
+<%--                <div class="form-check">--%>
+<%--                    <input class="form-check-input" type="checkbox" value="academic" id="academic">--%>
+<%--                    <label class="form-check-label" for="academic">--%>
+<%--                        Academic--%>
+<%--                    </label>--%>
+<%--                </div>--%>
+
+<%--            </div>--%>
+<%--            <div class="modal-footer">--%>
+<%--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>--%>
+<%--                <button type="button" class="btn btn-primary">Post</button>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        </form>--%>
+<%--    </div>--%>
+<%--</div>--%>
 
 
 
