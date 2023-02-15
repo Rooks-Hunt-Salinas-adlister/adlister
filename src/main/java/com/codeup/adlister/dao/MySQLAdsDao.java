@@ -55,12 +55,28 @@ public abstract class MySQLAdsDao implements Ads {
 
     @Override
     public Ad findAdByID(long adId) {
-        return null;
+            String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
+            try {
+                PreparedStatement stmt = connection.prepareStatement(query);
+                stmt.setLong(1, adId);
+                ResultSet rs = stmt.executeQuery();
+                rs.next();
+                return extractAd(rs);
+            } catch (SQLException e) {
+                throw new RuntimeException("Error finding a ad by ID", e);
+            }
     }
 
     @Override
     public void deleteAd(long adId) {
-
+        String query = "DELETE FROM ads WHERE id = ? ";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, adId);
+            stmt.execute();
+        }catch(SQLException e){
+            throw new RuntimeException("Error deleting ad");
+        }
     }
 
     @Override
