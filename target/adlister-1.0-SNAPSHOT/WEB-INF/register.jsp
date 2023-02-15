@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Or register to start</h1>
+        <h1>Or Register to Start</h1>
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
